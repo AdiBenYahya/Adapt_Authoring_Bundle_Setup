@@ -1,0 +1,153 @@
+Adapt Authoring Installation instructions
+-----------------------------------------
+
+v12Jul2025
+
+For Windows 11 system running a single user.
+
+This file describes the instructions to install all the software (Git, Node.js, MongoDB, Grunt, and Adapt Authoring) to enable the user to launch Adapt Authoring by the end of the installation. Adapt Authoring Bundle Setup installer follows the same installation steps as described on the Adapt Learning GitHub site.
+
+You will need Internet connection to download and complete the installation.
+
+
+Step-by-step Instructions
+-------------------------
+
+The steps will assume a first-time-ever installation of Adapt Authoring and will mostly follow the default configuration settings throughout the installation process which are adequate for using Adapt Authoring. Feel free to select different installation setting options.
+
+Note: for this installation to succeed, you will need to accept the default installation destination folder for both Git and Node.js (that is C:\Program Files).
+
+Adapt Authoring Bundle Setup
+----------------------------
+1-Welcome page ------> click next to start the Adapt Authoring bundle installation.
+2-License Agreement page ------> accept the license. Click next.
+3-Select Destination Location ------> option to select a different folder. If you type a non-existent folder, it will be created automatically. Choose and click next.
+4-Select Components ------> all the software components listed are needed. Click next.
+5-Ready to Install ------> click install.
+
+You should see the Git install wizard pop up automatically.
+
+Git
+---
+1-Information page ------> read the GNU General Public License. Click next to start the Git installation.
+2-Select Destination Location ------> option to select a different destination folder. Keep the default (*requirement for first-time-ever install*), and click next.
+3-Select Components ------> unless you need to select/deselect the components, accept the defaults, and click next.
+4-Select Start Menu Folder ------> option to select a different start menu folder. Choose and click next.
+5-Choosing the default editor used by Git ------> options available. Keep the default and click next.
+6-Adjusting the name of the initial branch in new repositories ------> options available. Keep the default and click next.
+7-Adjusting your PATH environment ------> options available. Keep the default and click next.
+8-Choosing the SSH executable ------> options available. Keep the default and click next.
+9-Choosing HTTPS transport backend ------> options available. Keep the default and click next.
+10-Configuring the line ending conversions ------> options available. Keep the default and click next.
+11-Configuring the terminal emulator to use with Git Bash ------> options available. Keep the default and click next.
+12-Choose the default behaviour of 'git pull' ------> options available. Keep the default and click next.
+13-Choose a credential helper ------> options available. Keep the default and click next.
+14-Configuring extra options ------> options available. Keep the default and click install.
+15-Completing page ------> option to view the release notes. Click finish.
+
+Once Git installation finishes, you should see the Node.js install wizard pop up automatically.
+
+Node.js
+-------
+1-Welcome page ------> click next to start the Node.js installation.
+2-License Agreement page ------> accept the license. Click next.
+3-Destination Folder ------> option to select a different destination folder. Keep the default (*requirement for first-time-ever install*), and click next.
+4-Custom Setup ------> options available. Keep the defaults and click next.
+5-Tools for Native Modules ------> select the box option to install the necessary tools and Chocolatey. Click next.
+6-Ready to install Node.js ------> click install.
+7-Completed page ------> click Finish.
+If you selected the option in 5 above:
+8-Tools for Node.js Native Modules Installation Script ------> a terminal window pops up, press any key to continue.
+9-Using this script downloads third party software ------> a second terminal pop ups, press any key to continue.
+10-Chocolatey upgraded packages terminal ------> a third terminal pops up, wait for it to complete. Type enter to exit.
+
+Once Node.js installation completes, you should see the MongoDB install wizard pop up automatically.
+
+MongoDB
+-------
+1-Welcome page ------> click next to start the MongoDB installation.
+2-License Agreement page ------> accept the license. Click next.
+3-Choose Setup Type ------> select 'Complete' button.
+4-Service Configuration page pops up ------> accept defaults and click next.
+5-Install MongoDB Compass ------> option to install Compass. Unless you need Compass, un-select the box option. Click next.
+6-Ready to install MongoDB page ------> click install.
+7-Completed page ------> click Finish.
+
+Once MongoDB installation completes, you should see the Grunt Installation terminal (below) pop up automatically.
+
+Grunt
+-----
+-Grunt (Grunt-cli) Installation terminal ------> checks that all the software are installed, options to configure Git for commits, and option to re-install Grunt-cli.
+Checking installed version of Git...
+? Do you wish to configure Git to associate your name with your Git commits (you can add or change it later)? [y/N]: ------> option to enter your Git commit name.
+? Type the username for Git:> ------> if yes, type your name (remember you can do this anytime later, and it will not affect using Adapt Authoring unless you are a developer).
+? Do you wish to configure Git to associate your email address with your Git commits (you can add or change it later)? [y/N]: ------> option to enter your Git email.
+? Type the email address for Git:> ------> if yes, type your email (again, this can be done later, and unless you are a developer, it will not affect using Adapt Authoring).
+
+Checking installed version of Grunt-cli...
+A previous installation of Grunt already exists ------> if you see this message, you have the option to re-install Grunt-cli with the next line:
+? Do you wish to install Grunt (Grunt-cli) using the Adapt Authoring Bundle Setup (choose yes if unsure)? [y/n]: ------> choose and press enter.
+
+Once Grunt installation completes, you should see the Adapt Authoring Installation terminal (below) pop up automatically. Type exit or close window.
+
+Adapt Authoring
+---------------
+-Adapt Authoring Installation terminal ------> option to change the Adapt Authoring installation directory location.
+? Do you wish to change your install directory for Adapt Authoring? [y/n]: ------> type n or N to confirm your directory. Press enter.
+? Do you wish to install Adapt Authoring? [y/n]: ------> type y or Y, and press enter to start Adapt Authoring installation process.
+
+-This script will install the application. Would you like to continue?
+? Continue? (Y/n) ------> press enter (Y).
+? Server port (5000) ------> option to choose a port number. Press enter for (5000).
+? Server name (localhost) ------> press enter for (localhost).
+? Data directory path (data) ------> option to name your data path (e.g. data10, useful for managing multiple data). Choose a name or press enter to accept (data).
+? Git repository URL to be used for the authoring tool source code (https://github.com/adaptlearning/adapt_authoring.git) ------> press enter to accept the default.
+? Git repository URL to be used for the framework source code (https://github.com/adaptlearning/adapt_framework.git) ------> press enter to accept the default.
+? Specific git revision to be used for the framework. Accepts any valid revision type (e.g. branch/tag/commit) (tags/v5.48.2) ------> press enter to accept the default.
+? Master database name (adapt-tenant-master) ------> option to name your master database. Choose a name or press enter to accept (adapt-tenant-master).
+? Will you be using a full database connection URI? (all connection options in the URI) (y/N) ------> press enter (N).
+
+? Database host (localhost) ------> press enter for (localhost).
+? Database server port (27017) ------> press enter for (27017).
+? Database server user (only specify if using database authentication) () ------> press enter.
+? Database server password (only specify if using database authentication) [hidden] ------> press enter.
+? Database server authentication database (only specify if using database authentication) () ------> press enter.
+? Will you be using an SMTP server? (used for sending emails) (y/N) ------> press enter (N).
+
+? Set a unique name for your tenant (master) Couldn't parse ARIA level defaults ------> option to type your unique name (e.g. master10 useful for managing multiple data). Choose your name or keep default. Press enter.
+? Set the display name for your tenant (Master) ------> option to type your display name (e.g. Master10, useful for managing multiple data). Choose your name or keep default. Press enter.
+? Email address ------> type your email address to use your Adapt Authoring account. Required to log into Adapt Authoring tool.
+? Password ------> type your password. Required to log into Adapt Authoring tool.
+
+Installation completed, the application can now be started with 'node server'. ------> Adapt Authoring was installed successfully.
+? If the script installation was successful, do you wish to create a desktop shortcut for launching Adapt Authoring? [y/n]: ------> type y to create a short cut on your desktop.
+-Type exit or close window to close the terminal.
+-Complete page ------> option to view readMe file. Click finish.
+
+Adapt Authoring install process has finished.
+
+
+Launching Adapt Authoring
+-------------------------
+This is a two-step process:
+
+1- Start the Adapt Authoring node server.
+If you opted to create the shortcut for launching Adapt Authoring earlier, double-click on it to launch the terminal to fire up the server. Alternatively, navigate to the Adapt Authoring install folder, right-click on it, select 'Open in Terminal' from the menu pop-up to launch a terminal. Type 'node server' (without quotes) on the terminal command line and press enter to start the server.
+
+2- Once you launched the node server, using your browser type http://localhost:5000/ (or the port you configured if different) and press enter. You should see the Adapt Authoring login screen. Type your email address and password you entered during the Adapt Authoring installation earlier, and you should see the Adapt Authoring dashboard.
+
+
+Uninstalling Adapt Authoring Bundle Setup
+-----------------------------------------
+-Uninstalling Adapt Authoring Bundle Setup follows the normal uninstall process as other applications on Windows.
+
+Method 1:
+From the Adapt Authoring Bundle Setup installation folder, double-click on unins000.exe to start the uninstall process. Follow the uninstall wizard pages.
+
+Method 2:
+Using Windows Control Panel, click Uninstall a program, double-click on Adapt Authoring Bundle Setup to start the uninstall process. Follow the uninstall wizard process.
+
+
+Notes: Caution! you are advised to backup any files and folders you need to keep. Adapt Authoring Bundle Setup should uninstall files it knows about (according to notes from Inno Setup). It should leave the Adapt Authoring installation folder in place (you can delete it manually if you wish).
+
+v12Jul2025

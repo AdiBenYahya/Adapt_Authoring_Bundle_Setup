@@ -1,0 +1,45 @@
+Setting up signtool to sign the Adapt Authoring Bundle Setup .exe file with a code certificate
+----------------------------------------------------------------------------------------------
+
+The following steps were implemented successfully in signing the existing Adapt Authoring Bundle Setup .exe code using signtool. The implementation uses the SHA256 algorithm, but feel free to follow your own preferred methods for signing code.
+
+Note, replace any reference to .pfx certificate file below with your own code certificate, for example, if you have purchased one from a certified authority (CA).
+The .pfx certificate file provided below, 'adaptAuthoringBundleCertificate12Jul25.pfx', is self-generated, and uses a freely available SHA256 certificate to timestamp the self-certification. If you use a CA issued certificate, follow their instructions to sign the code as their steps may differ.
+
+Using PowerShell command line, execute the following three commands:
+
+$cert = New-SelfSignedCertificate -Subject "Adapt Learning community" -CertStoreLocation "cert:\CurrentUser\My" -HashAlgorithm SHA256 -Type CodeSigningCert -NotAfter (Get-Date).AddMonths(36)
+
+$mypwd = ConvertTo-SecureString -String 'adaptAuthoringBundleSetup' -Force -AsPlainText
+
+Export-PfxCertificate -Cert $cert -FilePath "E:\adapt\innoSetup\AdaptAuthoringBundleSetup\installer\adaptAuthoringBundleCertificate12Jul25.pfx" -Password $mypwd
+
+
+You now have two options to sign the .exe code file.
+
+
+
+1- Using signtool to sign manually the Adapt Authoring Bundle Setup .exe file
+-----------------------------------------------------------------------------
+
+If you wish to use the signtool for signing manually your version of Adapt Authoring Bundle Setup .exe installer file, follow the step below.
+
+Using PowerShell command line again, execute the following command:
+
+signtool sign /n "Adapt Learning community" /f "E:\adapt\innoSetup\AdaptAuthoringBundleSetup\installer\adaptAuthoringBundleCertificate12Jul25.pfx" /td SHA256 /fd SHA256 /tr http://timestamp.digicert.com /p "adaptAuthoringBundleSetup" "E:\adapt\innoSetup\AdaptAuthoringBundleSetup\installer\Adapt_Authoring_Bundle_Setup-v12Jul25.exe"
+
+You are done.
+
+
+
+2- Using Inno Setup configuration to sign automatically the Adapt Authoring Bundle Setup .exe file
+--------------------------------------------------------------------------------------------------
+
+Alternatively, if you wish to use the signtool to sign automatically your Adapt Authoring Bundle Setup during the compile step of your script code, use Inno Setup configuration to accomplish this.
+Note, remember to replace the reference to the .pfx certificate file in the script with your own certificate file.
+
+Using Inno Setup script, declare SignTool=signToolSHA256 (see entry in the script) under the Setup section, with the following line (it should already be there):
+
+signtool sign /n $qAdapt Learning community$q /f $q{#signCertificate}$q /td SHA256 /fd SHA256 /tr http://timestamp.digicert.com /p $qadaptAuthoringBundleSetup$q $f
+
+You are done.

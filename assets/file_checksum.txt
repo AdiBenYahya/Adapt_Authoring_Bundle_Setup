@@ -1,0 +1,68 @@
+File Checksum - Security first
+---------------------------------
+
+v12Jul2025
+
+How do you know the software you just downloaded is safe to use on your computer?
+
+1- use file checksum technology to ensure your downloaded file is a genuine version from the developer's website (see 'Validating file checksum' below).
+
+2- use the digital certificate from a reputable certified authority (CA) to verify the code signature of your downloaded file.
+
+3- use anti-virus and anti-malware checkers.
+
+
+And you need to action the above *before* using your new download file.
+
+The good news for you is that all of the above are available immediately on your computer, free of cost and easy to use. However, for the developer distributing the software - it's still free to generate the file checksum, but it takes time and cost for setting up the digital certificate.
+
+
+Security measures for using Adapt Authoring Bundle Setup
+-----------------------------------------------------------
+
+For the first point above:
+-published on the genuine developer's website, you will find a file checksum value (string of alphanumeric characters) next to the download button for the Adapt Authoring Bundle Setup installer. If the file checksum value of your Adapt Authoring Bundle Setup copy matches the developer's file checksum published on the website you know for certainty your download copy is safe to use. If on the other hand, the values do not match, your copy is unsafe for use (it could have been tampered or corrupted) -- discard it and download a fresh copy.
+
+On the second point:
+-Adapt Authoring Bundle Setup installer has no budget for a digital certificate issued from a CA. Having no digital certificate means you will see Microsoft Windows pop-ups warning you about unknown software publisher during the installation process. However, each version of Adapt Authoring Bundle Setup will have a personal code signature (see Digital Signatures tab on file properties) - but these are not guarantees to be from the genuine developer (as anyone can sign personal code signatures) and are ignored by Windows pop-up warnings. Only you can decide if you are comfortable to use the software.
+
+For the third point:
+-Adapt Authoring Bundle Setup will be checked for virus and malware before packaging for distribution.
+
+Ultimately, it's down to you whether to use Adapt Authoring Bundle Setup.
+
+Finally, the usual disclaimer: using Adapt Authoring Bundle Setup comes with no warranties or responsibilities of any kind; it's an experimental installer, a personal contribution, developed to help the Adapt Learning community, and free to use. So, use it at your own risk.
+
+
+Validating file checksum
+-------------------------
+
+It's really simple. You can use your computer's Windows terminal to generate the file checksum. The instructions below are specific for Command Prompt terminal (cmd) and not Powershell (which has different commands). If you experience issues on your first attempt, try running as an administrator on the second attempt.
+
+1- open a Windows Command Prompt terminal. Several ways to do this. A quick method:
+
+   -- right-click on the folder containing Adapt Authoring Bundle Setup (this could be your Downloads folder for example).
+   -- a menu pops up, look for and select 'Open in Terminal'.
+   -- a Windows terminal should open at the correct folder location.
+   -- on the command line type:  cmd and press enter.
+
+
+2- on the command line type:
+
+      certUtil -hashfile Adapt_Authoring_Bundle_Setup-v21Jun25.exe SHA256
+
+   -- ensure you replace 'Adapt_Authoring_Bundle_Setup-21Jun25.exe' with your specific file name.
+   -- you should see the following three lines as an example:
+
+      SHA256 hash of Adapt_Authoring_Bundle_Setup-v21Jun25.exe:
+      bec173c852976046f08013c428d80a249bf3364e484d88d634a5aeff9c693c97
+      CertUtil: -hashfile command completed successfully.
+
+3- in the above example, the file checksum of your file is  bec173c852976046f08013c428d80a249bf3364e484d88d634a5aeff9c693c97
+
+   -- compare it with the one on the genuine developer's website site.
+   -- if they match, great - all is good. If no match, dispose of your copy and download a new one (and re-check its file checksum).
+
+4- that's it - you are done with file checksum verification.
+
+v12Jul2025

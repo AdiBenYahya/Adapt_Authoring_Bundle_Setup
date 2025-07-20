@@ -1,0 +1,58 @@
+Usage Notice
+---------------
+
+v12Jul2025
+
+Adapt Authoring Bundle Setup is free software, under GNU GPL-v3.0. You are free to use this Adapt Authoring Bundle Setup installer without warranty or responsibility of any kind.
+
+Adapt Authoring Bundle Setup is an installation script and its open source is available at GitHub, under repository Adapt_Authoring_Bundle_Setup. The code is based on the Inno Setup, a free and open-source installer for Windows (https://jrsoftware.org).
+
+The Adapt Authoring Bundle Setup has no application software or product of its own; it's simply an install script to automate the installation of Git, Node.js, MongoDB, Grunt, and Adapt Authoring tool.
+
+Also, Adapt Authoring Bundle Setup does not pre-package or store inside it any of the above mentioned software. Instead, it uses URL links to the official third-party sites (Git, Node.js, MongoDB, Grunt, and Adapt Authoring) to download their software, and only then stores the official installers for Git, Node.js, and MongoDB in its own setup folder. In addition, it uses two batch scripts to install the packages for Grunt and Adapt Authoring.
+
+The purpose of Adapt Authoring Bundle Setup is to simplify the installation of Adapt Authoring and guide the user through the installation steps of all the required software (Git, Node.js, MongoDB, Grunt, and Adapt Authoring) to enable the user to launch Adapt Authoring tool quicker than the current installation process.
+
+Adapt Authoring Bundle Setup installation process follows the same steps as described on the Adapt Learning GitHub site, titled 'Installing the Authoring Tool (https://github.com/adaptlearning/adapt_authoring/wiki/Installing-the-Authoring-Tool), as of the version date shown above.
+
+Please consult the Adapt Learning GitHub to familiarise yourself with the Adapt Authoring tool installation process before using this Adapt Authoring Bundle Setup installer.
+
+This version of Adapt Authoring Bundle Setup includes the installation of the following list of third-party software:
+
+* Git		(Git-2.50.1-64-bit)  Git for Windows/x64 Setup
+		https://git-scm.com/downloads/win
+
+* Node		(node-v16.20.2-x64)  Node.js for Windows x64 (best compatibility with Adapt older functionality).
+		(node-v24.4.0-x64) download option available.
+		(node-v22.17.0-x64 LTS) download option available.
+		https://nodejs.org/en/download/
+
+* MongoDB	(mongodb-windows-x86_64-8.0.11-signed)  MongoDB Community Server
+		https://www.mongodb.com/try/download/community
+
+* Grunt		(grunt-cli@1.5.0)
+		https://gruntjs.com/getting-started
+
+* Adapt Authoring	Adapt authoring tool 0.11.5
+                 	https://github.com/adaptlearning/adapt_authoring/wiki/Installing-the-Authoring-Tool
+
+
+Before using Adapt Authoring Bundle Setup, please consider the following points:
+
+* it is an experimental installer and an individual contribution to the Adapt Learning community.
+
+* it is targeted for personal and academic use; you need to consider carefully if Adapt Authoring Bundle Setup is appropriate for commercial purposes.
+
+* it gives no warranty of any kind and takes no responsibility of any kind. Use it at your own risk.
+
+* the version shown for each software in the above installation list is accurate as of the version date shown above. Any of the versions shown can change at any time by the relevant third-party, so you may not receive the versions shown by the time you use this Adapt Authoring Bundle Setup installer.
+
+* it is dependent on the URL links to the relevant third-parties software to work as expected. The third-party URL links can change their content or break at any time and such risks are beyond the control of Adapt Authoring Bundle Setup installer.
+
+* by using the above mentioned third-party software you agree to their terms and conditions of use as stated in their respective licenses.
+
+* no technical support is available.
+
+* although care was taken to test Adapt Authoring Bundle Setup on Windows 11 for the main normal workflow scenarios, this is no guarantee it will always work in all circumstances. Use it at your own risk.
+
+v12Jul2025
