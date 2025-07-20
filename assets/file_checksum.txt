@@ -49,12 +49,12 @@ It's really simple. You can use your computer's Windows terminal to generate the
 
 2- on the command line type:
 
-      certUtil -hashfile Adapt_Authoring_Bundle_Setup-v21Jun25.exe SHA256
+      certUtil -hashfile Adapt_Authoring_Bundle_Setup-v12Jul25.exe SHA256
 
-   -- ensure you replace 'Adapt_Authoring_Bundle_Setup-21Jun25.exe' with your specific file name.
+   -- ensure you replace 'Adapt_Authoring_Bundle_Setup-v12Jul25.exe' with your specific file name.
    -- you should see the following three lines as an example:
 
-      SHA256 hash of Adapt_Authoring_Bundle_Setup-v21Jun25.exe:
+      SHA256 hash of Adapt_Authoring_Bundle_Setup-v12Jul25.exe:
       bec173c852976046f08013c428d80a249bf3364e484d88d634a5aeff9c693c97
       CertUtil: -hashfile command completed successfully.
 
