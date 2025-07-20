@@ -31,7 +31,7 @@ For the third point:
 
 Ultimately, it's down to you whether to use Adapt Authoring Bundle Setup.
 
-Finally, the usual disclaimer: using Adapt Authoring Bundle Setup comes with no warranties or responsibilities of any kind; it's an experimental installer, a personal contribution, developed to help the Adapt Learning community, and free to use. So, use it at your own risk.
+Finally, the usual disclaimer: using Adapt Authoring Bundle Setup comes with no warranties or responsibilities of any kind; it's an experimental installer, an individual contribution, developed to help the Adapt Learning community, and free to use. So, use it at your own risk.
 
 
 Validating file checksum
