@@ -139,9 +139,13 @@ It's really simple. Once you have downloaded Adapt Authoring Bundle Setup exe fi
 1- open a Windows Command Prompt terminal. Several ways to do this. A quick method:
 
    -- right-click on the folder containing Adapt Authoring Bundle Setup (this could be your Downloads folder for example).
+   
    -- a menu pops up, look for and select 'Open in Terminal'.
+   
    -- a Windows terminal should open at the correct folder location.
+   
    -- on the command line type:  cmd and press enter.
+   
 
 
 2- on the command line type:
@@ -149,7 +153,9 @@ It's really simple. Once you have downloaded Adapt Authoring Bundle Setup exe fi
       certUtil -hashfile Adapt_Authoring_Bundle_Setup-v12Jul25.exe SHA256
 
    -- ensure you replace 'Adapt_Authoring_Bundle_Setup-v12Jul25.exe' with your specific file name.
+   
    -- you should see the following three lines as an example:
+   
 
       SHA256 hash of Adapt_Authoring_Bundle_Setup-v12Jul25.exe:
       bec173c852976046f08013c428d80a249bf3364e484d88d634a5aeff9c693c97
