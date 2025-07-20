@@ -158,6 +158,7 @@ It's really simple. Once you have downloaded Adapt Authoring Bundle Setup exe fi
 3- in the above example, the file checksum of your file is  bec173c852976046f08013c428d80a249bf3364e484d88d634a5aeff9c693c97
 
    -- compare it with the one on the genuine developer's website site. On GitHub, you will find it in Adapt_Authoring_Bundle_Setup-v12Jul25.exe_CheckSum_Key.txt, next to the .exe file.
+   
    -- if they match, great - all is good. If no match, dispose of your copy and download a new one (and re-check its file checksum).
 
 4- that's it - you are done with file checksum verification.
