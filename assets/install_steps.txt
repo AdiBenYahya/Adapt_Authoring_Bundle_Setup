@@ -20,7 +20,7 @@ Note: for this installation to succeed, you will need to accept the default inst
 Adapt Authoring Bundle Setup
 ----------------------------
 1-Welcome page ------> click next to start the Adapt Authoring bundle installation.
-2-License Agreement page ------> accept the license. Click next.
+2-Usage Notice page ------> accept the notice /license. Click next.
 3-Select Destination Location ------> option to select a different folder. If you type a non-existent folder, it will be created automatically. Choose and click next.
 4-Select Components ------> all the software components listed are needed. Click next.
 5-Ready to Install ------> click install.
