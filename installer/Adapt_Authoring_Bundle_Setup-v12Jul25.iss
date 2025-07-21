@@ -27,7 +27,7 @@
 
 //User messages.
 #define beveledLabelCaption "www.adaptlearning.org"
-#define openStepByStepInstallGuide "Do you wish to open the step-by-step installation guide pop-up window?' #13#13 '(helps you walk through the full install process)"
+#define isOpenStepByStepInstallGuide "Do you wish to open the step-by-step installation guide pop-up window?' #13#13 '(helps you walk through the full install process)"
 #define fullInstallation "Full installation"
 #define customInstallation "Custom installation"
 #define nodejsVersionToBeInstalled "Node.js version:"
@@ -35,8 +35,8 @@
 
 //Script development (not seen by the user).
 #define setupRootPathDev "E:\adapt\innoSetup\"     ;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< update
-#define setupCompiledOutputDirDev setupRootPathDev + "AdaptAuthoringBundleSetup\installer\"     ;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< update
-#define setupAssetsDirDev setupRootPathDev + "AdaptAuthoringBundleSetup\assets\"     ;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< update
+#define setupCompiledOutputDirDev setupRootPathDev + "Adapt_Authoring_Bundle_Setup\installer\"     ;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< update
+#define setupAssetsDirDev setupRootPathDev + "Adapt_Authoring_Bundle_Setup\assets\"     ;<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< update
 #define setupIcoImageFileDev setupAssetsDirDev + "adapt_logo_red.ico"
 #define setupLargeTopRightBmpImageFileDev setupAssetsDirDev + "adapt_logo_right_red.bmp"
 #define setupLargeLeftImageFileDev setupAssetsDirDev + "adapt_logo_left_red.bmp"
@@ -153,7 +153,6 @@ const
 numberOfItemsInComponentsList = 4; //0-based counter.
 
 var
-isWpSelectDirVisitedAlready: Boolean; //Limits the step-by-step installation guide pop-up window to trigger once only.
 nodejsDropdownComboBox: TNewComboBox;
 nodejsDropdownDescriptionLabel: TLabel;
 componentsDropdownMenuArr: array [0..4] of Boolean;
@@ -254,18 +253,7 @@ begin
     
     wpSelectComponents:
     begin
-      
-      if isWpSelectDirVisitedAlready = False then
-        begin
-          
-          if MsgBox('{#openStepByStepInstallGuide}', mbConfirmation, MB_YESNO or MB_DEFBUTTON2) = IDYES then
-            begin
-              ShellExec('', '{#setupAssetsDirDev}{#installSteps}', '', '', SW_SHOWNORMAL, ewNoWait, exceptionCode);
-            end;
-        end;
-        isWpSelectDirVisitedAlready := True; //Comment line to remove limitation.
         nodejsDropdownComboBox.ItemIndex := nodejsDropdownVersionSelected; //Track the current selected Node.js version in the dropdown.
-        
         refreshSelectedComponents; //Refresh components for both dropdown menus when entering wpSelectComponents page, then check any selected boxes for custom components.
         WizardForm.TypesCombo.OnChange := @customDropdownChangeListener; //Listener for change to custom dropdown menu.
         WizardForm.ComponentsList.OnClickCheck := @customComponentsCheckboxChangeListener; //Listener for selecting /deselecting individual checkboxs for custom components.
