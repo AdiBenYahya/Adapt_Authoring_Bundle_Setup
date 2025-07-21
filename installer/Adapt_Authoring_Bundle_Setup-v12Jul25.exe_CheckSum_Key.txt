@@ -1,2 +1,2 @@
 SHA256 hash of Adapt_Authoring_Bundle_Setup-v12Jul25.exe:
-07fceb5a0596316139d6a6c0e2e2a7e18bff6f1e2833438bba97257bcae7af17
+de32711161cecb3668c35d899ef08227d719f1d7c40bb891270f2b9fb498e840
