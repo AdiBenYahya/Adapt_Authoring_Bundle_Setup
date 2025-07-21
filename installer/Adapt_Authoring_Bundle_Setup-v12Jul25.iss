@@ -153,6 +153,7 @@ const
 numberOfItemsInComponentsList = 4; //0-based counter.
 
 var
+isWpSelectDirVisitedAlready: Boolean; //Limits the step-by-step installation guide pop-up window to trigger once only.
 nodejsDropdownComboBox: TNewComboBox;
 nodejsDropdownDescriptionLabel: TLabel;
 componentsDropdownMenuArr: array [0..4] of Boolean;
@@ -242,6 +243,25 @@ begin
   refreshSelectedComponents;
 end;
 
+procedure openStepByStepInstallGuide; //Optionally open the step-by-step popup.
+var
+exceptionCode: Integer;
+begin
+  
+  if isWpSelectDirVisitedAlready = False then
+    begin
+      if MsgBox('{#isOpenstepByStepInstallGuide}', mbConfirmation, MB_YESNO or MB_DEFBUTTON2) = IDYES then
+        begin
+          try
+            ExtractTemporaryFile(ExpandConstant('{#installSteps}'));
+            ShellExec('', ExpandConstant('{tmp}\{#installSteps}'), '', '', SW_SHOWNORMAL, ewNoWait, exceptionCode);
+          except //Handle the exception and move on with the rest of the installation.
+            MsgBox('Could not open Step-by-step install guide.', mbInformation, MB_OK);
+          end;
+        end;
+    end;
+end;
+
 procedure CurPageChanged(CurPageID: Integer);
 var
 exceptionCode: Integer;
@@ -253,12 +273,14 @@ begin
     
     wpSelectComponents:
     begin
-        nodejsDropdownComboBox.ItemIndex := nodejsDropdownVersionSelected; //Track the current selected Node.js version in the dropdown.
-        refreshSelectedComponents; //Refresh components for both dropdown menus when entering wpSelectComponents page, then check any selected boxes for custom components.
-        WizardForm.TypesCombo.OnChange := @customDropdownChangeListener; //Listener for change to custom dropdown menu.
-        WizardForm.ComponentsList.OnClickCheck := @customComponentsCheckboxChangeListener; //Listener for selecting /deselecting individual checkboxs for custom components.
-        nodejsDropdownComboBox.OnDropDown := @nodejsDropdownOpenListener; //Listener for keeping open the Node.js dropdown menu.
-        nodejsDropdownComboBox.OnChange := @nodejsDropdownChangeListener; //Listener for change to Node.js dropdown menu.
+      openStepByStepInstallGuide; //Pop up the step-by-step guide option before the install begins.
+      isWpSelectDirVisitedAlready := True; //Comment line to remove limitation.
+      nodejsDropdownComboBox.ItemIndex := nodejsDropdownVersionSelected; //Track the current selected Node.js version in the dropdown.
+      refreshSelectedComponents; //Refresh components for both dropdown menus when entering wpSelectComponents page, then check any selected boxes for custom components.
+      WizardForm.TypesCombo.OnChange := @customDropdownChangeListener; //Listener for change to custom dropdown menu.
+      WizardForm.ComponentsList.OnClickCheck := @customComponentsCheckboxChangeListener; //Listener for selecting /deselecting individual checkboxs for custom components.
+      nodejsDropdownComboBox.OnDropDown := @nodejsDropdownOpenListener; //Listener for keeping open the Node.js dropdown menu.
+      nodejsDropdownComboBox.OnChange := @nodejsDropdownChangeListener; //Listener for change to Node.js dropdown menu.
     end;
     
     wpInstalling:
