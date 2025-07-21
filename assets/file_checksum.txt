@@ -1,5 +1,5 @@
 File Checksum - Security first
----------------------------------
+------------------------------
 
 v12Jul2025
 
@@ -18,7 +18,7 @@ The good news for you is that all of the above are available immediately on your
 
 
 Security measures for using Adapt Authoring Bundle Setup
------------------------------------------------------------
+--------------------------------------------------------
 
 For the first point above:
 -published on the genuine developer's website, you will find a file checksum value (string of alphanumeric characters) next to the download button for the Adapt Authoring Bundle Setup installer. If the file checksum value of your Adapt Authoring Bundle Setup copy matches the developer's file checksum published on the website you know for certainty your download copy is safe to use. If on the other hand, the values do not match, your copy is unsafe for use (it could have been tampered or corrupted) -- discard it and download a fresh copy.
@@ -35,7 +35,7 @@ Finally, the usual disclaimer: using Adapt Authoring Bundle Setup comes with no 
 
 
 Validating file checksum
--------------------------
+------------------------
 
 It's really simple. Once you have downloaded Adapt Authoring Bundle Setup exe file, you can use your computer's Windows terminal to generate its file checksum. The instructions below are specific for Command Prompt terminal (cmd) and not Powershell (which has different commands). If you experience issues on your first attempt, try running as an administrator on the second attempt.
 
