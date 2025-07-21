@@ -14,7 +14,7 @@ How do you know the software you just downloaded is safe to use on your computer
 
 And you need to action the above *before* using your new download file.
 
-The good news for you is that all of the above are available immediately on your computer, free of cost and easy to use. However, for the developer distributing the software - it's still free to generate the file checksum, but it takes time and cost for setting up the digital certificate.
+The good news for you is that all of the above are available immediately on your computer, free of cost and easy to use. However, for the developer distributing the software -- it's still free to generate the file checksum, but it takes time and cost for setting up the digital certificate.
 
 
 Security measures for using Adapt Authoring Bundle Setup
