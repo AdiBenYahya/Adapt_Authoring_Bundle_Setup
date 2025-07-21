@@ -22,8 +22,9 @@ Adapt Authoring Bundle Setup
 1-Welcome page ------> click next to start the Adapt Authoring bundle installation.
 2-Usage Notice page ------> accept the notice /license. Click next.
 3-Select Destination Location ------> option to select a different folder. If you type a non-existent folder, it will be created automatically. Choose and click next.
-4-Select Components ------> you have the option for full installation (default) or custom installation. All five components are needed. Choose and click next.
-5-Ready to Install ------> click install.
+4-Step-by-step installation guide popup ------> popup option to open the step-by-step install guide file to assist you through the full installation process. Click yes.
+5-Select Components ------> you have the option for full installation (default) or custom installation. All five components are needed. Choose and click next.
+6-Ready to Install ------> click install.
 
 You should see the Git install wizard pop up automatically.
 
