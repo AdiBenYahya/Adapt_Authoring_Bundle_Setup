@@ -92,7 +92,7 @@ Therefore, to address this challenge, one central assumption was put in place. I
 
 When running the two install batch scripts, each one informs the user of progress. The 'Grunt Install script' attempts to detect the presence of Git, Node.js, MongoDB, and Grunt installations and report back, while the 'Adapt Authoring Install script' prompts the user to optionally change the installation location before continuing to the Adapt Authoring specific installation process. It also offers the option of creating a shortcut for launching Adapt Authoring tool after a successful install.
 
-AS noted elsewhere, since this bundle installer uses URL links to download each software version from their official third-party sites - the links are accurate as of the version date shown above - each version can change at any time by the relevant third-party, so you may not receive the versions listed above by the time you use this Adapt Authoring Bundle Setup installer.
+As noted elsewhere, since this bundle installer uses URL links to download each software version from their official third-party sites - the links are accurate as of the version date shown above - each version can change at any time by the relevant third-party, so you may not receive the versions listed above by the time you use this Adapt Authoring Bundle Setup installer.
 
 Future Adapt Authoring Bundle Setup installers with updated versions of the software can be built easily and quickly.
 
