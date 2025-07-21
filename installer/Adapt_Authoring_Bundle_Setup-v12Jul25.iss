@@ -28,6 +28,7 @@
 //User messages.
 #define beveledLabelCaption "www.adaptlearning.org"
 #define isOpenStepByStepInstallGuide "Do you wish to open the step-by-step installation guide pop-up window?' #13#13 '(helps you walk through the full install process)"
+#define openStepByStepInstallGuideExceptionMessage "Could not open the step-by-step installation guide"
 #define fullInstallation "Full installation"
 #define customInstallation "Custom installation"
 #define nodejsVersionToBeInstalled "Node.js version:"
@@ -256,7 +257,7 @@ begin
             ExtractTemporaryFile(ExpandConstant('{#installSteps}'));
             ShellExec('', ExpandConstant('{tmp}\{#installSteps}'), '', '', SW_SHOWNORMAL, ewNoWait, exceptionCode);
           except //Handle the exception and move on with the rest of the installation.
-            MsgBox('Could not open Step-by-step install guide.', mbInformation, MB_OK);
+            MsgBox('{#openStepByStepInstallGuideExceptionMessage}', mbInformation, MB_OK);
           end;
         end;
     end;
