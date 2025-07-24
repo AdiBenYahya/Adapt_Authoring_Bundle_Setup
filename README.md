@@ -59,8 +59,12 @@ Before using Adapt Authoring Bundle Setup, please consider the following points:
 ReadMe
 ------
 
-For a step-by-step installation of Adapt Authoring, please see 'install_steps.txt' in the 'assets' folder.
+For end-users, please note the following:
+-----------------------------------------
 
+If you wish to install and use Adapter Authoring tool, all you need is to download and run the Adapt Authoring Bundle Setup .exe installer file. Please note the following sections:
+
+For a step-by-step installation of Adapt Authoring, please see 'install_steps.txt' in the 'assets' folder.
 
 Adapt Authoring Bundle Setup helps simplify and speed up the installation of Adapt Authoring tool from Adapt Learning. It achieves this by automating the installation steps as much as possible to make the installation workflow more convenient and efficient while providing the user with all the available installation configuration options. To ensure Adapt Authoring Bundle Setup installation works as expected, it follows the same installation steps as described on the Adapt Learning GitHub site.
 
@@ -172,6 +176,12 @@ It's really simple. Once you have downloaded Adapt Authoring Bundle Setup exe fi
 
 For developers, please note the following:
 ------------------------------------------
+
+Install Inno Setup software for development:
+--------------------------------------------
+
+To develop your script, you will need to download and install the Inno Setup software from https://jrsoftware.org. Inno Setup comes with its own editor, compiler, and other tools to assist you in developing and configuring your script. Inno Setup is compatible with Microsoft Windows only.
+
 
 Setting up signtool to sign the Adapt Authoring Bundle Setup .exe file with a code certificate
 ----------------------------------------------------------------------------------------------
